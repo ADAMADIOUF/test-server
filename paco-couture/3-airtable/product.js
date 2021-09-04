@@ -1,6 +1,6 @@
 const result = document.querySelector(".result");
 const fetchProduct = async () => {
- result.innerHTML = `<h2>Loading...</h2>`
+ result.innerHTML = `<h2><i class="fas fa-spinner"></i></h2>`
  try {
   const id = window.location.search
   const {data:{fields}} = await axios.get(`/api/3-product${id}`)

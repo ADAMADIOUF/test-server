@@ -140,6 +140,7 @@ p {
   border-radius: var(--radius);
   object-fit: cover;
   transition: var(--transition);
+  box-shadow: var(--light-shadow);
 }
 .product img:hover{
   transform: scale(1.5);
@@ -172,4 +173,4 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-/* single product */
+

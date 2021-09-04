@@ -1,15 +1,4 @@
-/*
-=============== 
-Fonts
-===============
-*/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
-/*
-=============== 
-Variables
-===============
-*/
 
 :root {
   --black-choise:#000814;
@@ -22,7 +11,8 @@ Variables
   --fourth-color:#1b4332;
   --fifty-color:#dddf00;
   --clr-black: #222;
-  --ff-primary: "font-family: 'Lato', sans-serif";
+  --ff-primary: "font-family: 'Poppins', sans-serif";
+    --ff-secondary: "font-family: 'Vollkorn', serif";
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -243,6 +233,7 @@ li{
   text-align: center;
 }
 .nav-links a{
+  font-family: var(--ff-primary);
   display: block;
   font-size: 2rem;
   color: black;
@@ -329,11 +320,15 @@ Slider
 }
 @media (min-width:992px) {
   .slide h1 {
-  font-size: 2rem;
-  color: var(--black-choise);
+  font-size: 1.5rem;
+  color: var(--fourth-color);
   position: absolute;
-  font-weight: 500;
+  font-weight: 800;
   text-transform: capitalize;
+  z-index: 2;
+}
+.slide h1 span{
+  color: var(--fifty-color);
 }
 }
 
@@ -397,13 +392,17 @@ Slider
 
 
 /* single product */
-
+.result{
+  max-width: 80vw;
+}
 .title{
   color: yellow;
 }
 .product img{
-  max-width: 30rem;
+  max-width: 29rem;
   object-fit: cover;
+  align-items: center;
+  
 }
 .title{
   font-size: 2rem;
@@ -418,4 +417,137 @@ Slider
 .desc{
   font-size: 1.5rem;
   color: var(--choise-color);
+}
+@media (min-width:992px) {
+  .product img{
+  max-width: 60rem;
+  height: 30rem;
+  object-fit: cover;
+  align-items: center;
+  
+}
+}
+/* footer */
+.footer{
+  
+  box-shadow: var(--light-shadow);
+  margin-top: 3rem;
+background: var(--black-choise);
+cursor: pointer;
+
+}
+.icons-footer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.icons-footer a{
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--white-choise);
+  transition: var(--transition);
+}
+.icons-footer a:hover{
+  color: var(--fifty-color);
+  cursor: pointer;
+}
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo{
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: var(--choise-color);
+}
+.footer-logo span{
+  color: var(--fifty-color);
+  
+}
+.footer-reseved{
+  font-size: 1.5rem;
+  letter-spacing: var(--spacing);
+  margin-left: 1rem;
+  text-align: center;
+}
+
+/* contact */
+.form {
+  margin-top: 2rem;
+  background: var(--fifty-color);
+  max-width: 600px;
+  padding: 2.5rem 3rem;
+  border-radius: var(--radius);
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--fisrt-color);
+  font-size: 1.15rem;
+  letter-spacing: var(--spacing);
+}
+input {
+  width: 100%;
+  background: var(--choise-color);
+  border-color: transparent;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 1.25rem;
+}
+textarea {
+  width: 100%;
+  background: var(--fisrt-color);
+  border-color: transparent;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+.submit-btn {
+  width: 100%;
+  background: var(--fisrt-color);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  border-radius: var(--radius);
+  border-color: transparent;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: var(--choise-color);
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.submit-btn:hover {
+  background: var(--clr-black);
+}
+.alert {
+  color: var(--third-color);
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+.success {
+  color: var(--fourth-color);
+  margin-bottom: 0;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sending {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: var(--third-color);
+  animation: spinner 0.6s linear infinite;
 }
