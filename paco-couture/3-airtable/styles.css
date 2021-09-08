@@ -1,16 +1,4 @@
 
-/*
-=============== 
-Fonts
-===============
-*/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
-
-/*
-=============== 
-Variables
-===============
-*/
 
 :root {
   --black-choise:#000814;
@@ -23,7 +11,8 @@ Variables
   --fourth-color:#1b4332;
   --fifty-color:#dddf00;
   --clr-black: #222;
-  --ff-primary: "font-family: 'Lato', sans-serif";
+  --ff-primary: "font-family: 'Poppins', sans-serif";
+    --ff-secondary: "font-family: 'Vollkorn', serif";
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -124,53 +113,50 @@ p {
     width: 95vw;
   }
 }
-.result {
-  padding: 5rem 0;
-}
 
-.product {
-  display: block;
-  margin-bottom: 3rem;
-  color: var(--white-choise);
+
+
+.result{
+ max-width: 1170px;
+ width: 100%;
+ margin: 0 auto;
 }
-.product img {
-  width: 100%;
-  display: block;
-  height: 300px;
-  border-radius: var(--radius);
-  object-fit: cover;
-  transition: var(--transition);
-  box-shadow: var(--light-shadow);
+.product img{
+ max-width: 25rem;
+ height: 30rem;
+ object-fit: cover;
+ border-radius: 25px;
+ transition: var(--transition);
+ box-shadow: var(--light-shadow);
+
 }
 .product img:hover{
-  transform: scale(1.5);
-}
 
-.info {
-  padding: 1rem 0;
+padding: 1rem;
+}
+.container-product{
+ display: flex;
+}
+.info{
+ display: flex;
+ justify-content: space-between;
+ font-size: 1.5rem;
+ margin: 0.55rem;
+ color: var(--fifty-color);
+ text-transform: capitalize;
+ font-weight: 400;
+ letter-spacing: var(--spacing);
+}
+.price{
+ color: var(--choise-color);
+ font-size: 2rem;
+}
+@media (min-width:992px) {
+ .result{
   display: flex;
   justify-content: space-between;
-  font-size: 1.5rem;
-  color: var(--white-choise);
-  text-transform: capitalize;
-  letter-spacing: var(--spacing);
+  flex-wrap: wrap;
+  gap: 1rem;
+ }
+ 
 }
-.price {
-  color: var(--fifty-color);
-}
-@media screen and (min-width: 776px) {
-  .result {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-  }
-  .product img {
-    height: 200px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .result {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
